@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: steam-idler
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: STEAM_USER
+        sync: false
+      - key: STEAM_PASS
+        sync: false
